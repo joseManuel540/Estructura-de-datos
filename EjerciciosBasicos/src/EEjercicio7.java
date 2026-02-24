@@ -14,8 +14,18 @@ public class EEjercicio7 {
 
         stockReportes[1] = stockReportes[1]- 1;
 
+        System.out.println("Stock Reportes: ");
         for (int i = 0; i < stockReportes.length; i++) {
             System.out.println(stockReportes[i]);
         }
+
+        System.out.println("Stock almacen: ");
+        for (int i = 0; i < stockAlmacen.length; i++) {
+            System.out.println(stockAlmacen[i]);
+        }
+
+        //ambos cambiaron porque al asignar un array a otro, este
+        //copia su referencia, mas no copia los valores del array, entonces 
+        //ambos apuntan al mismo espacio de memoria, si se modifica uno, cambia en el otro
     }
 }
