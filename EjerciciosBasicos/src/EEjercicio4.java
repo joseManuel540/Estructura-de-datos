@@ -15,16 +15,21 @@ public class EEjercicio4 {
         int Cilindraje = 1000;
         double Precio = 200000;
         char Color = 'r';
-        boolean SOAT = true;
+        boolean SOAT = false;
 
 
-        System.out.println("=== RUNT ===");
+        System.out.println("======== RUNT ========");
         System.out.println("Placa: "+ Placa);
         System.out.println("Año fabricacion: "+ AñoFabri);
         System.out.println("cilindraje en cc: "+ Cilindraje);
         System.out.println("precio: "+ Precio);
         System.out.println("inicial del color: "+ Color);
-        System.out.println("Soat vigente: "+ SOAT);
-
+        if (SOAT) {
+            System.out.println("El SOAT esta vigente");
+        }
+        else
+        {
+            System.out.println("El soat no esta vigente");
+        }
     }
 }
