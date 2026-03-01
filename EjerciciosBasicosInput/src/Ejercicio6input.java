@@ -19,7 +19,7 @@ public class Ejercicio6input {
         System.out.println("Ingrese un nuevo numero entero");
         b = sc.nextInt();
         sc.close();
-        System.out.println("a: "+ a+ " --- No cambio por que b copio el valor de a");
+        System.out.println("a: "+ a+ " --- No cambio por que b copio el valor de a, mas no su referencia");
         System.out.println("b: "+b + " --- Si cambio porque pedimos ingresar nuevo valor para b");
 
         System.out.println();
