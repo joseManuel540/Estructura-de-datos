@@ -7,7 +7,12 @@ encuentres un 5.0, aumentar una variable contador. */
 
 public class Ejercicio5 {
     public static void main(String[] args) {
-        double[] notas = {4.5, 5, 2, 5, 5, 3.5};
+        double[] notas = {
+            4.5, 5, 2, 5, 5, 3.5,
+            4.3, 5, 5, 3, 2, 4.5,
+            3.5, 3, 2, 4, 5, 3.2,
+            2.2, 4, 5, 5, 5, 2.6,
+            1.5, 5, 3, 2, 3, 2.2};
         int notaMaxima = 5;
         int contador = 0;
 

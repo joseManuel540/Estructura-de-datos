@@ -7,7 +7,7 @@ valor para encontrar el mayor de todos. */
 
 public class Ejercicio3 {
     public static void main(String[] args) {
-        double[] temperatura = {35,28,35.5,40,30,60,80,45,45.4,39.7,43.8};
+        double[] temperatura = {35 ,28 ,35.5 ,40 ,30 ,60 ,80 ,45 ,45.4 ,39.7 ,43.8};
         double max = temperatura[0];
 
         for (int i = 0; i < temperatura.length; i++) {

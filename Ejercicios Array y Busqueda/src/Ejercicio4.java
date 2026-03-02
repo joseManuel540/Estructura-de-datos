@@ -13,7 +13,7 @@ public class Ejercicio4 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        int[] codigos = {10, 20,40, 60, 100, 160, 260};
+        int[] codigos = {10, 20, 40, 60, 100, 160, 260, 400, 500, 543, 786, 890, 1000};
         int low = 0;
         int high = codigos.length - 1;
         
