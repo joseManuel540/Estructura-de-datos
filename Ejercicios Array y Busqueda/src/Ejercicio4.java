@@ -14,25 +14,25 @@ public class Ejercicio4 {
         Scanner sc = new Scanner(System.in);
 
         int[] codigos = {10, 20, 40, 60, 100, 160, 260, 400, 500, 543, 786, 890, 1000};
-        int low = 0;
-        int high = codigos.length - 1;
+        int inicio = 0;
+        int vAlto = codigos.length - 1;
         
         System.out.println("Ingrese el codigo de acceso para buscar: ");
         int opcion = sc.nextInt();
         sc.close();
 
-        while (low <= high) {
-        int mid = low + (high - low) / 2;
+        while (inicio <= vAlto) {
+        int medio = inicio + (vAlto - inicio) / 2;
 
-        if (codigos[mid] == opcion) {
-            System.out.println("Se encontro el codigo en la posicion: " + mid);
+        if (codigos[medio] == opcion) {
+            System.out.println("Se encontro el codigo en la posicion: " + medio);
             return;
 
-        } else if (codigos[mid] < opcion) {
-            low = mid + 1;    
+        } else if (codigos[medio] < opcion) {
+            inicio = medio + 1;    
         
         } else {
-            high = mid - 1;  
+            vAlto = medio - 1;  
         }
         }   
         System.out.println("No se encontro el producto");

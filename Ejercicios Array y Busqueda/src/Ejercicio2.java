@@ -12,28 +12,28 @@ public class Ejercicio2 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        int[] cedulas =
+        int[] cedulasID =
         {1234, 2345, 3456, 4567, 6789, 7891, 8912, 9012, 
         10000, 10230, 12345, 13456, 14567, 15678, 16789};
-        int low = 0;
-        int high = cedulas.length - 1;
+        int inicio = 0;
+        int vAlto = cedulasID.length - 1;
 
         System.out.println("Ingrese su numero de cedula: ");
-        int nCedula = sc.nextInt();
+        int cedula = sc.nextInt();
         sc.close();
 
-        while (low <= high) {
-        int mid = low + (high - low) / 2;
+        while (inicio <= vAlto) {
+        int medio = inicio + (vAlto - inicio) / 2;
 
-        if (cedulas[mid] == nCedula) {
-            System.out.println("Se encontro la cedula en la posicion: " + mid);
+        if (cedulasID[medio] == cedula) {
+            System.out.println("Se encontro la cedula en la posicion: " + medio);
             return;
 
-        } else if (cedulas[mid] < nCedula) {
-            low = mid + 1;    
+        } else if (cedulasID[medio] < cedula) {
+            inicio = medio + 1;    
         
         } else {
-            high = mid - 1;  
+            vAlto = medio - 1;  
         }
         }
         System.out.println("No se encontro la cedula");
