@@ -6,18 +6,37 @@ El Problema: Un cliente llega a la ventanilla y da su número. El sistema debe e
 Algoritmo a usar: Búsqueda Binaria. Como los datos ya están ordenados, este algoritmo permitirá
  encontrar al cliente dividiendo la lista a la mitad en cada paso.*/
 
+import java.util.Scanner;
+
 public class Ejercicio2 {
     public static void main(String[] args) {
-        int[] codigos = {123456, 234567,345678, 456789, 770123, 678912};
-        int codigoBarra = 770123;
-        System.out.println("Usted ha escaneado el producto con codigo de barras 770123");
+        Scanner sc = new Scanner(System.in);
 
-        for (int i = 0; i < codigos.length; i++) {
-            if (codigos[i] == codigoBarra) {
-                System.out.println("El producto se encontro en la posicion: " + (i+1));
-                return;
-            } 
-        }   
-        System.out.println("No se encontro el producto");
+        int[] cedulas =
+        {1234, 2345, 3456, 4567, 6789, 7891, 8912, 9012, 
+        10000, 10230, 12345, 13456, 14567, 15678, 16789};
+        int low = 0;
+        int high = cedulas.length - 1;
+
+        System.out.println("Ingrese su numero de cedula: ");
+        int nCedula = sc.nextInt();
+        sc.close();
+
+        while (low <= high) {
+        int mid = low + (high - low) / 2;
+
+        if (cedulas[mid] == nCedula) {
+            System.out.println("Se encontro la cedula en la posicion: " + mid);
+            return;
+
+        } else if (cedulas[mid] < nCedula) {
+            low = mid + 1;    
+        
+        } else {
+            high = mid - 1;  
+        }
+        }
+        System.out.println("No se encontro la cedula");
+
     }
 }
