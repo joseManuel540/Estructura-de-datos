@@ -19,7 +19,7 @@ public class Ordenamiento2 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         
-        System.out.println("Porfavor ingrese la cantidad de libros que contienela caja: ");
+        System.out.println("Porfavor ingrese la cantidad de libros que contiene la caja: ");
         int cantidad = sc.nextInt();
 
         int[] ISBN = new int[cantidad];
@@ -27,26 +27,20 @@ public class Ordenamiento2 {
         for (int i = 0; i < ISBN.length; i++) {
             System.out.println("Porfavor ingrese el ISBN del libro # " + (i+1));
             ISBN[i] = sc.nextInt();
+            int key = ISBN[i];
+            int j = i - 1;
+            // Mueve los elementos de arr[0..i-1], que son mayores que key,
+            // una posición adelante de su posición actual
+            while (j >= 0 && ISBN[j] > key) {
+            ISBN[j + 1] = ISBN[j];
+            j = j - 1;
+            }
+            ISBN[j + 1] = key;
+            System.out.println(Arrays.toString(ISBN));
+            
         }
-        System.out.println(Arrays.toString(ISBN));
-        ordenar(ISBN);
         sc.close();
 
     }
 
-    public static void ordenar(int[] arr) {
-        int n = arr.length;
-        for (int i = 1; i < n; ++i) {
-        int key = arr[i];
-        int j = i - 1;
-        // Mueve los elementos de arr[0..i-1], que son mayores que key,
-        // una posición adelante de su posición actual
-        while (j >= 0 && arr[j] > key) {
-        arr[j + 1] = arr[j];
-        j = j - 1;
-        }
-        arr[j + 1] = key;
-        System.out.println(Arrays.toString(arr));
-        }
-        }
 }

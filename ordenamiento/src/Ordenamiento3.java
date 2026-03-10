@@ -23,11 +23,16 @@ public class Ordenamiento3 {
             System.out.println("Porfavor ingrese el peso del paquete #" + (i+1));
             pesos[i] = sc.nextDouble();
         }
-
+        sc.close();
         System.out.println("Arreglo desordenado: "+ Arrays.toString(pesos));
         ordenar(pesos);
         System.out.println("Arreglo ordenado: "+ Arrays.toString(pesos));
     }
+        //Shell Sort es mejor ya que en lugar de comparar los elementos consecutivos, compara 
+        //elementos que estan separados por una distancia dentro del array,
+        //esto hace que los elementos se muevan grandes distancias en
+        //pocas operaciones, acercandolos a su posicion correcta de una manera mas rapida
+        //que la insercion simple cuando se trata de muchos valores dentro del array.
 
     public static void ordenar(double[] arr) {
         int n = arr.length;
