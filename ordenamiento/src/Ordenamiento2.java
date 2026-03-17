@@ -45,6 +45,7 @@ public class Ordenamiento2 {
 
     
     public static void ordenar(int[] arr) {
+        //InsertionSort
         int n = arr.length;
         for (int i = 1; i < n; ++i) {
             int key = arr[i];

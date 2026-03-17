@@ -35,6 +35,7 @@ public class Ordenamiento3 {
         //que la insercion simple cuando se trata de muchos valores dentro del array.
 
     public static void ordenar(double[] arr) {
+        //ShellSort
         int n = arr.length;
         // Empezar con una brecha grande y reducirla
         for (int brecha = n / 2; brecha > 0; brecha /= 2) {

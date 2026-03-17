@@ -23,4 +23,24 @@ public class Ejercicio5 {
         }   
         System.out.println("Los estudiantes que sacaron una nota de 5 fueron un total de: " + contador);
     }
+
+    public static int busquedaSaltos(int[] arr, int objetivo) {
+int n = arr.length;
+int paso = (int) Math.sqrt(n);   // tamaño del salto = √n
+int anterior = 0;
+// Fase 1: saltar de bloque en bloque
+while (anterior < n && arr[Math.min(paso, n) - 1] < objetivo) {
+anterior = paso;
+paso += (int) Math.sqrt(n);
+if (anterior >= n) return -1;
+}
+// Fase 2: búsqueda lineal hacia atrás desde el bloque encontrado
+while (arr[anterior] < objetivo) {
+anterior++;
+if (anterior == Math.min(paso, n)) return -1;
+}
+if (arr[anterior] == objetivo) return anterior;
+return -1;
+}
+
 }

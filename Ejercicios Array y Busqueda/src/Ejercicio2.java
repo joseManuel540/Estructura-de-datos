@@ -39,4 +39,22 @@ public class Ejercicio2 {
         System.out.println("No se encontro la cedula");
 
     }
+
+    public static int busquedaBinaria(int[] arr, int objetivo) {
+int low = 0;
+int high = arr.length - 1;
+while (low <= high) {
+int mid = low + (high - low) / 2;   // evita overflow
+if (arr[mid] == objetivo) {
+return mid;
+} else if (arr[mid] < objetivo) {
+low = mid + 1;    
+// buscar en mitad derecha
+} else {
+high = mid - 1;   // buscar en mitad izquierda
+}
+}
+return -1;
+}
+
 }

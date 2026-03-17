@@ -37,6 +37,7 @@ public class Ordenamiento1 {
     }
 
     public static void ordenar(double[] arr) {
+        //SelectionSort
         int n = arr.length;
         for (int i = 0; i < n - 1; i++) {
             int indiceMinimo = i;

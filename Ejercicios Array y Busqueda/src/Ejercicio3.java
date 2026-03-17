@@ -18,4 +18,28 @@ public class Ejercicio3 {
 
         System.out.println("La temperatura mas alta es: " + max);
     }
+
+    public static int busquedaInterpolacion(int[] arr, int objetivo) {
+int low = 0;
+int high = arr.length - 1;
+while (low <= high && objetivo >= arr[low] && objetivo <= arr[high]) {
+if (low == high) {
+if (arr[low] == objetivo) return low;
+return -1;
+}
+// Estimación de posición por interpolación
+int pos = low + ((objetivo - arr[low]) * (high - low))
+/ (arr[high] - arr[low]);
+if (arr[pos] == objetivo) {
+return pos;
+} else if (arr[pos] < objetivo) {
+low = pos + 1;    
+// buscar a la derecha
+} else {
+high = pos - 1;   // buscar a la izquierda
+}
+}
+return -1;
+}
+
 }
