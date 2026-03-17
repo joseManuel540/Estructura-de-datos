@@ -51,5 +51,5 @@ public class Ordenamiento1 {
         arr[indiceMinimo] = arr[i];
         arr[i] = temp;
         }
-        }
+    }
 }
